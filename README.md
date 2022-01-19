@@ -18,10 +18,10 @@ slightly out until it next updates.
 
 For more info on any of the parts please see:
 
-Nightscout: https://nightscout.github.io
-Adafruit IO: https://io.adafruit.com
-Cheerlights: https://cheerlights.com
-Magtag: https://learn.adafruit.com/adafruit-magtag (lots of good projects to learn from on there, most of this code was nicked from the various
+* Nightscout: https://nightscout.github.io
+* Adafruit IO: https://io.adafruit.com
+* Cheerlights: https://cheerlights.com
+* Magtag: https://learn.adafruit.com/adafruit-magtag (lots of good projects to learn from on there, most of this code was nicked from the various
 projects on there).
 
 Any questions hit me up on Twitter @thebotmakes
