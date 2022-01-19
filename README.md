@@ -16,6 +16,8 @@ To see your data all you should need to do is update the secrets.py file with yo
 to power this by battery I'd suggest changing the update to less than every minute - although then you'll have to deal with the clock being
 slightly out until it next updates.
 
+You'll need to copy the fonts / bmp / lib directories and both code.py and secrets.py on to your Magtag.
+
 For more info on any of the parts please see:
 
 * Nightscout: https://nightscout.github.io
