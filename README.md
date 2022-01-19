@@ -8,9 +8,9 @@ flashes the Magtag Neopixels with the latest Cheerlights colour to show you it's
 
 The project has three sources of data:
 
-  * Your Nightscout profile
-  * Adafruit IO time feed
-  * Cheerlights feed
+  *Your Nightscout profile
+  *Adafruit IO time feed
+  *Cheerlights feed
 
 To see your data all you should need to do is update the secrets.py file with your own personal data (WiFi, Nightscout URL etc.). If you're going
 to power this by battery I'd suggest changing the update to less than every minute - although then you'll have to deal with the clock being
