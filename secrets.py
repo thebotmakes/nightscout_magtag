@@ -2,10 +2,10 @@
 # If you put them in the code you risk committing that info or sharing it
 
 secrets = {
-    'ssid' : 'BT-P5A6NS',
-    'password' : 'mEu7EAQctqfVpd',
-    'aio_username' : 'thebot',
-    'aio_key' : 'f89c40192b744bffadc0278127960b06',
+    'ssid' : 'YOURNETWORKNAME',
+    'password' : 'YOURNETWORKPASSWORD',
+    'aio_username' : 'YOURAIOUSERNAME',
+    'aio_key' : 'YOURAIOKEY',
     'timezone' : "Europe/London", # http://worldtimeapi.org/timezones
-    'nightscout_url' : "https://thebotbloodglucose.herokuapp.com/api/v1/entries/sgv" #nightscout url
+    'nightscout_url' : "https://YOURID.herokuapp.com/api/v1/entries/sgv" #nightscout url
     }
