@@ -36,8 +36,13 @@ TIME_URL += "&fmt=%25Y-%25m-%25d+%25H%3A%25M%3A%25S.%25L+%25j+%25u+%25z+%25Z"
 CHEERLIGHTS_URL = "http://api.thingspeak.com/channels/1417/field/2/last.json"
 COLOR_LOCATION = ['field2']
 
+#comment all but one of the following SLEEP_TIME lines out, depending how often you want to update
+
+# Update every minute
+SLEEP_TIME = 1 * 60  # seconds
+
 # Update every 5 minutes
-SLEEP_TIME = 5 * 60  # seconds
+#SLEEP_TIME = 5 * 60  # seconds
 
 # Update once per hour
 #SLEEP_TIME = 60 * 60  # seconds
@@ -51,7 +56,13 @@ TEST_RUN = False
 # pylint: disable=line-too-long
 FAKE_DATA = '{"date":1642418780116,"sgv":187,"delta":0,"sysTime":"2022-01-17T19:24:34.454Z","_id":"QsDUTF9eomzqcMZbfiPoVBay","device":"tomato","direction":"Flat","utcOffset":0, "mills": 1642447474454,"type": "sgv"'
 
+
+
 def text_transform_direction(val):
+
+    '''This was borrowed & adapted from Scott Hanselman's Pyportal code for Nighscout
+    Displays the direction using an arrow instead of the wording'''
+
     if val == "Flat":
         new_val = "→"
     elif val == "SingleUp":
@@ -71,6 +82,9 @@ def text_transform_direction(val):
     return new_val
 
 def neo_flash(times):
+
+    '''This is used as an alarm if the blood sugar is too low'''
+
     x = 0
     while x < times:
         magtag.peripherals.neopixel_disable = False
@@ -123,9 +137,10 @@ else:
     json_data = json.loads(FAKE_DATA)
 
 # update the labels to display values
-bg_val_int = round(int(json_data[2])/18,1)
+bg_val_int = round(int(json_data[2])/18,1) #Nightscout send sgv data, this converts it to values I recognise
 bg_val = str(bg_val_int)
-if bg_val_int < 4.5:
+
+if bg_val_int < 4.5:  #sound alarm if blood sugar is too low
     neo_flash(5)
 else:
     pass
